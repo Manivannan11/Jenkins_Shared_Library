@@ -1,0 +1,28 @@
+pipeline{ 
+    agent any
+    stages{
+        stage('AnsibleTower'){
+            steps{
+               ansibleTower jobTemplate: 'Jenkins', 
+               jobType: 'run', 
+               throwExceptionWhenFail: false, 
+               towerCredentialsId: 'Ansibletower', 
+               towerLogLevel: 'false', 
+               towerServer: 'Ansibletower'
+            }
+        }
+    }
+}
+
+
+@Library('Devops_Library@main') _
+pipeline{ 
+    agent any
+    stages{
+        stage('AnsibleTower'){
+            steps{
+              
+            }
+        }
+    }
+}

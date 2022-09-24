@@ -1,4 +1,11 @@
-def call(def usernameinputvalue)
+def runAnsibleJobs(jobs)
 {
-    echo "my name is $(usernameinputvalue)"
+    def ansible_job = ansibleTower(
+        jobTemplate: 'Jenkins', 
+        jobType: 'run', 
+        throwExceptionWhenFail: false, 
+        towerCredentialsId: 'Ansibletower', 
+        towerLogLevel: 'false', 
+        towerServer: 'Ansibletower' 
+    )
 }
