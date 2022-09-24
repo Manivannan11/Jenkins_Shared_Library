@@ -1,11 +1,11 @@
-def runAnsibleJobs(jobs)
+def call()
 {
-    def ansible_job = ansibleTower(
-        jobTemplate: 'Jenkins', 
-        jobType: 'run', 
-        throwExceptionWhenFail: false, 
-        towerCredentialsId: 'Ansibletower', 
-        towerLogLevel: 'false', 
-        towerServer: 'Ansibletower' 
+        ansibleTower(
+            jobTemplate: 'Jenkins', 
+            jobType: 'run', 
+            throwExceptionWhenFail: false, 
+            towerCredentialsId: 'Ansibletower', 
+            towerLogLevel: 'false', 
+            towerServer: 'Ansibletower' 
     )
 }

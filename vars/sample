@@ -16,6 +16,11 @@ pipeline{
 
 
 @Library('Devops_Library@main') _
+node
+{
+    runAnsible ()
+}
+
 pipeline{ 
     agent any
     stages{
